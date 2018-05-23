@@ -11,3 +11,5 @@ Append to your [/etc/hosts](/etc/hosts) file
 then run into your shell `docker-compose up --build` and wait a bit to download and build the necessary dependencies, then fire up your browser and type http://glpi.local into the addressbar.
 
 Then follow the configuration steps, for database credentials use host `mysql`, for username type `glpi` and for password type `glpipasswd`.
+
+As login credentials use the default ones - `glpi` for username, `glpi` for password.
