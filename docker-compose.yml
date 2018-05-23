@@ -2,37 +2,38 @@ version: '2'
 
 services:
   glpi:
-    build: .
+    build: glpi
     env_file:
-      - ./glpi.env
-# image: nginx:alpine
+      - ./glpi/glpi.env
     ports:
       - "80:80"
     volumes:
-      - glpi_data:/code
+      - glpi_code:/code
       - ./site.conf:/etc/nginx/conf.d/site.conf
     links:
       - php
       - mysql
 
   php:
-#    image: php:7-fpm-alpine
     build: php
     volumes:
-      - glpi_data:/code
+      - glpi_code:/code
       - mysql_socket:/var/run/mysqld/
     links:
       - mysql
 
   mysql:
-    image: mariadb
     env_file:
-      - ./glpi.env
+      - ./glpi/glpi.env
+    build:
+      context: mysql
+    
     volumes:
       - mysql_data:/var/lib/mysql
       - mysql_socket:/var/run/mysqld/
 
 volumes:
   mysql_data: {}
+  glpi_code: {}
   glpi_data: {}
   mysql_socket: {}
