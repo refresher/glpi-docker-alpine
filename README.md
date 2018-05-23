@@ -1,6 +1,6 @@
 # glpi-docker-alpine
 
-This repository was created to attempt to containerize GLPI in Docker.  
+This repository was created in attempt to containerize GLPI in Docker.  
 I use the official images for [mariadb](https://hub.docker.com/_/mariadb/), [nginx:alpine](https://hub.docker.com/_/nginx/) and [php:7-fpm-alpine](https://hub.docker.com/_/php/)
 
 The current version of GLPI that is being deployed is [9.3-beta](https://github.com/glpi-project/glpi/releases/download/9.3-beta/glpi-9.3-beta.tgz)  
