@@ -1,2 +1,2 @@
 FROM mariadb
-EXPOSE 3306
+#EXPOSE 3306

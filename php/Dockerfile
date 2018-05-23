@@ -9,3 +9,4 @@ RUN docker-php-ext-configure xml && docker-php-ext-install xml
 RUN docker-php-ext-configure xmlrpc && docker-php-ext-install xmlrpc
 RUN docker-php-ext-configure opcache && docker-php-ext-install opcache
 RUN docker-php-ext-configure gd && docker-php-ext-install gd
+#CMD chown -R www-data /code/glpi

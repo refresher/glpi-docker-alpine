@@ -18,7 +18,6 @@ services:
     build: php
     volumes:
       - glpi_code:/code
-      - mysql_socket:/var/run/mysqld/
     links:
       - mysql
 
@@ -30,10 +29,8 @@ services:
     
     volumes:
       - mysql_data:/var/lib/mysql
-      - mysql_socket:/var/run/mysqld/
 
 volumes:
   mysql_data: {}
   glpi_code: {}
   glpi_data: {}
-  mysql_socket: {}
